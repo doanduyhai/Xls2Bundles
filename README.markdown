@@ -92,6 +92,9 @@ The XLS file has:
  </table>
  
  
+ There is a sample realSample.xlsx file in src/main/resouces. Just run "xls2properties:generate"  and check in target/resources for generated resources bundle files
+
+ 
  Original version of this code was developed by Romain LINSOLAS to manage properties files. I adapt the code for resource bundles
 
 Installation
@@ -103,7 +106,7 @@ Installation
 - Edit the pom.xml and add the following in the <build><plugins> section (see below)
 - Indicate the XLS file you want to read for resource bundle generation in the <xlsFile>
 - Indicate also your base directory. By default generated resource bundles will be put at <basedir>/target/resources
-- Run mvn "xls2properties:generate" and it's done!
+- Run mvn "xls2properties:generate" and it's done! 
 
 	&lt;build&gt;
 		&lt;plugins&gt;
