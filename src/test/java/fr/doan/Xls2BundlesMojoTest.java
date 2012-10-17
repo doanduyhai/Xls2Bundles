@@ -13,10 +13,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Before;
 import org.junit.Test;
 
-public class Xls2PropertiesMojoTest
+public class Xls2BundlesMojoTest
 {
 
-	private Xls2PropertiesMojo plugin = new Xls2PropertiesMojo();
+	private Xls2BundlesMojo plugin = new Xls2BundlesMojo();
 	private Workbook excel;
 
 	@Before

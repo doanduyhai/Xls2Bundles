@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.doan</groupId>
-  <artifactId>xls2properties-maven-plugin</artifactId>
+  <artifactId>xls2bundles-maven-plugin</artifactId>
   <version>1.0</version>
   <name>Xls2Properties</name>
   <description>Maven plugin to generate properties from Xls file</description>
@@ -55,7 +55,7 @@
     <plugins>
       <plugin>
         <groupId>fr.doan</groupId>
-        <artifactId>xls2properties-maven-plugin</artifactId>
+        <artifactId>xls2bundles-maven-plugin</artifactId>
         <version>1.0</version>
         <configuration>
     		<xlsFile>${project.basedir}/src/main/resources/realSample.xlsx</xlsFile>

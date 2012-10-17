@@ -25,7 +25,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * @phase compile
  */
 
-public class Xls2PropertiesMojo extends AbstractMojo
+public class Xls2BundlesMojo extends AbstractMojo
 {
 
 	private static final String SETTINGS_SHEET = "SETTINGS";
@@ -188,7 +188,7 @@ public class Xls2PropertiesMojo extends AbstractMojo
 		{
 			basedir = basedir + File.separator;
 		}
-		File outputDirectory = new File(basedir + "target/resources");
+		File outputDirectory = new File(basedir + "target/bundles");
 		// Create 1 file per environment (column)
 		if (!outputDirectory.exists())
 		{

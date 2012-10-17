@@ -1,10 +1,10 @@
-Xls2Properties
+Xls2Bundles
 ================
 
 Presentation
 ------------------
 
-Xls2Properties is a small Maven plugin to generate resource bundle files with locales from a source XLS file.
+Xls2Bundles is a small Maven plugin to generate resource bundle files with locales from a source XLS file.
 
 The XLS file has:
 
@@ -92,7 +92,7 @@ The XLS file has:
  </table>
  
  
- There is a sample **realSample.xlsx** file in *src/main/resouces*. Just run **mvn xls2properties:generate**  and check in *target/resources* for generated resources bundle files
+ There is a sample **realSample.xlsx** file in *src/main/resouces*. Just run **mvn xls2bundles:generate**  and check in *target/resources* for generated resources bundle files
 
  
  Original version of this code was developed by **Romain LINSOLAS** to manage properties files. I adapt the code for resource bundles
@@ -106,13 +106,13 @@ Installation
 - Edit the **pom.xml** and add the following in the *&lt,build&gt;&lt;plugins&gt; section (see below)
 - Indicate the XLS file you want to read for resource bundle generation in the &lt;xlsFile&gt;
 - Indicate also your base directory. By default generated resource bundles will be put at *&lt;basedir&gt;/target/resources*
-- Run **mvn xls2properties:generate** and it's done! 
+- Run **mvn xls2bundles:generate** and it's done! 
 
 	&lt;build&gt;<br/>
 		&lt;plugins&gt;<br/>
 		  &lt;plugin&gt;<br/>
 			&lt;groupId&gt;fr.doan&lt;/groupId&gt;<br/>
-			&lt;artifactId&gt;xls2properties-maven-plugin&lt;/artifactId&gt;<br/>
+			&lt;artifactId&gt;xls2bundles-maven-plugin&lt;/artifactId&gt;<br/>
 			&lt;version&gt;1.0&lt;/version&gt;<br/>
 			&lt;configuration&gt;<br/>
 				&lt;xlsFile&gt;${project.basedir}/src/main/resources/myXLSFile.xls&lt;/xlsFile&gt;<br/>
