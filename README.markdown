@@ -8,15 +8,15 @@ Xls2Properties is a small Maven plugin to generate resource bundle files with lo
 
 The XLS file has:
 
-- A "SETTING" sheet where you indicate the default locale and resource file name to be generated
-- A "DEFAULT" sheet where you put all your default resource values
-- As many extra sheets as the number of locales you want to support. For example you'll have a "en_US" sheet for American english locale and "fr_FR" for french locale. You can add as many extra sheet you need. The sheet name should respect Java i18n locale naming though (fr or fr_FR for example)
+- A **SETTING** sheet where you indicate the default locale and resource file name to be generated
+- A **DEFAULT** sheet where you put all your default resource values
+- As many extra sheets as the number of locales you want to support. For example you'll have a **en_US** sheet for American english locale and **fr_FR** for french locale. You can add as many extra sheet you need. The sheet name should respect Java i18n locale naming though (fr or fr_FR for example)
 
- The plugin will generate as many resource bundles files as there are locale sheets in the XLS, including the DEFAULT locale sheet.
- The DEFAULT sheet will serve as base template for other locales. 
- If a property in "DEFAULT" is not found in a locale sheet, it will be added to this locale (with the message in default language though).
- If a property from "DEFAULT" already exists in the locale sheet, its value will be kept and not overriden
- If a property exists in the local sheet but not in the "DEFAULT" sheet, it will also be kept
+ The plugin will generate as many resource bundles files as there are locale sheets in the XLS, including the **DEFAULT** locale sheet.
+ The **DEFAULT** sheet will serve as base template for other locales. 
+ If a property in **DEFAULT** is not found in a locale sheet, it will be added to this locale (with the message in default language though).
+ If a property from **DEFAULT** already exists in the locale sheet, its value will be kept and not overriden
+ If a property exists in the local sheet but not in the **DEFAULT** sheet, it will also be kept
  
  Ex: 
  
@@ -92,37 +92,37 @@ The XLS file has:
  </table>
  
  
- There is a sample realSample.xlsx file in src/main/resouces. Just run "xls2properties:generate"  and check in target/resources for generated resources bundle files
+ There is a sample **realSample.xlsx** file in *src/main/resouces*. Just run **mvn xls2properties:generate**  and check in *target/resources* for generated resources bundle files
 
  
- Original version of this code was developed by Romain LINSOLAS to manage properties files. I adapt the code for resource bundles
+ Original version of this code was developed by **Romain LINSOLAS** to manage properties files. I adapt the code for resource bundles
 
 Installation
 ------------
 
 - Fork the project (or retrieve the zip and put it on your local computer)
-- Run "mvn clean install"
+- Run **mvn clean install**
 - Create a Maven project to generate your resource bundles
-- Edit the pom.xml and add the following in the <build><plugins> section (see below)
-- Indicate the XLS file you want to read for resource bundle generation in the <xlsFile>
-- Indicate also your base directory. By default generated resource bundles will be put at <basedir>/target/resources
-- Run mvn "xls2properties:generate" and it's done! 
+- Edit the **pom.xml** and add the following in the *&lt,build&gt;&lt;plugins&gt; section (see below)
+- Indicate the XLS file you want to read for resource bundle generation in the &lt;xlsFile&gt;
+- Indicate also your base directory. By default generated resource bundles will be put at *&lt;basedir&gt;/target/resources*
+- Run **mvn xls2properties:generate** and it's done! 
 
-	&lt;build&gt;
-		&lt;plugins&gt;
-		  &lt;plugin&gt;
-			&lt;groupId&gt;fr.doan&lt;/groupId&gt;
-			&lt;artifactId&gt;xls2properties-maven-plugin&lt;/artifactId&gt;
-			&lt;version&gt;1.0&lt;/version&gt;
-			&lt;configuration&gt;
-				&lt;xlsFile&gt;${project.basedir}/src/main/resources/myXLSFile.xls&lt;/xlsFile&gt;
-				&lt;basedir&gt;${project.basedir}&lt;/basedir&gt;
-			&lt;/configuration&gt;
-		  &lt;/plugin&gt;
-		&lt;/plugins&gt;
-	&lt;/build&gt;
+	&lt;build&gt;<br/>
+		&lt;plugins&gt;<br/>
+		  &lt;plugin&gt;<br/>
+			&lt;groupId&gt;fr.doan&lt;/groupId&gt;<br/>
+			&lt;artifactId&gt;xls2properties-maven-plugin&lt;/artifactId&gt;<br/>
+			&lt;version&gt;1.0&lt;/version&gt;<br/>
+			&lt;configuration&gt;<br/>
+				&lt;xlsFile&gt;${project.basedir}/src/main/resources/myXLSFile.xls&lt;/xlsFile&gt;<br/>
+				&lt;basedir&gt;${project.basedir}&lt;/basedir&gt;<br/>
+			&lt;/configuration&gt;<br/>
+		  &lt;/plugin&gt;<br/>
+		&lt;/plugins&gt;<br/>
+	&lt;/build&gt;<br/>
   
-Note: the plugin works with Excel 2003 format (xls) as well as Excel post 2007 format (xlsx)
+Note: the plugin works with Excel 2003 format (**xls**) as well as Excel post 2007 format (**xlsx**)
 
 License
 -------
