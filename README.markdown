@@ -20,15 +20,13 @@ The XLS file has:
  
  Ex: 
  
+  Source XLS content 
  <table>
 	<thead>
 		<tr>
-			<th>DEFAULT sheet (en_GB)<th>
-			<th>en_US sheet<th>
-			<th>fr sheet<th>
-			<th>Generated en_GB.properties<th>
-			<th>Generated en_US.properties<th>
-			<th>Generated fr.properties<th>
+			<th>DEFAULT sheet (en_GB)</th>
+			<th>en_US sheet</th>
+			<th>fr sheet</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -50,7 +48,23 @@ The XLS file has:
 					<li>welcome.message=Bienvenue à {0}!</li>
 					<li>registration.prompt=Veuillez vous enregistrer avant d'utiliser le service</li>
 				</ul>			
-			</td>
+			</td>		
+		</tr>
+	</tbody>
+ </table>
+
+ Generated resource bundles content :
+ 
+<table>
+	<thead>
+		<tr>
+			<th>Generated en_GB.properties</th>
+			<th>Generated en_US.properties</th>
+			<th>Generated fr.properties</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
 			<td>
 				<ul>
 					<li>welcome.message=Welcome to {0}!</li>
@@ -76,8 +90,8 @@ The XLS file has:
 		</tr>
 	</tbody>
  </table>
-
-
+ 
+ 
  Original version of this code was developed by Romain LINSOLAS to manage properties files. I adapt the code for resource bundles
 
 Installation
@@ -91,19 +105,19 @@ Installation
 - Indicate also your base directory. By default generated resource bundles will be put at <basedir>/target/resources
 - Run mvn "xls2properties:generate" and it's done!
 
-<build>
-    <plugins>
-      <plugin>
-        <groupId>fr.doan</groupId>
-        <artifactId>xls2properties-maven-plugin</artifactId>
-        <version>1.0</version>
-        <configuration>
-    		<xlsFile>${project.basedir}/src/main/resources/myXLSFile.xls</xlsFile>
-    		<basedir>${project.basedir}</basedir>
-  		</configuration>
-      </plugin>
-    </plugins>
- </build>
+	&lt;build&gt;
+		&lt;plugins&gt;
+		  &lt;plugin&gt;
+			&lt;groupId&gt;fr.doan&lt;/groupId&gt;
+			&lt;artifactId&gt;xls2properties-maven-plugin&lt;/artifactId&gt;
+			&lt;version&gt;1.0&lt;/version&gt;
+			&lt;configuration&gt;
+				&lt;xlsFile&gt;${project.basedir}/src/main/resources/myXLSFile.xls&lt;/xlsFile&gt;
+				&lt;basedir&gt;${project.basedir}&lt;/basedir&gt;
+			&lt;/configuration&gt;
+		  &lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
   
 Note: the plugin works with Excel 2003 format (xls) as well as Excel post 2007 format (xlsx)
 
