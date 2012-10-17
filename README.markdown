@@ -108,19 +108,19 @@ Installation
 - Indicate also your base directory. By default generated resource bundles will be put at *&lt;basedir&gt;/target/resources*
 - Run **mvn xls2bundles:generate** and it's done! 
 
-	&lt;build&gt;<br/>
-		&lt;plugins&gt;<br/>
-		  &lt;plugin&gt;<br/>
-			&lt;groupId&gt;fr.doan&lt;/groupId&gt;<br/>
-			&lt;artifactId&gt;xls2bundles-maven-plugin&lt;/artifactId&gt;<br/>
-			&lt;version&gt;1.0&lt;/version&gt;<br/>
-			&lt;configuration&gt;<br/>
-				&lt;xlsFile&gt;${project.basedir}/src/main/resources/myXLSFile.xls&lt;/xlsFile&gt;<br/>
-				&lt;basedir&gt;${project.basedir}&lt;/basedir&gt;<br/>
-			&lt;/configuration&gt;<br/>
-		  &lt;/plugin&gt;<br/>
-		&lt;/plugins&gt;<br/>
-	&lt;/build&gt;<br/>
+	&nbsp;&lt;build&gt;<br/>
+		&nbsp;&nbsp;&lt;plugins&gt;<br/>
+		  &nbsp;&nbsp;&nbsp;&lt;plugin&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;fr.doan&lt;/groupId&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;xls2bundles-maven-plugin&lt;/artifactId&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;1.0&lt;/version&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;configuration&gt;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xlsFile&gt;${project.basedir}/src/main/resources/myXLSFile.xls&lt;/xlsFile&gt;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;basedir&gt;${project.basedir}&lt;/basedir&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/configuration&gt;<br/>
+		  &nbsp;&nbsp;&nbsp;&lt;/plugin&gt;<br/>
+		&nbsp;&nbsp;&lt;/plugins&gt;<br/>
+	&nbsp;&lt;/build&gt;<br/>
   
 Note: the plugin works with Excel 2003 format (**xls**) as well as Excel post 2007 format (**xlsx**)
 
